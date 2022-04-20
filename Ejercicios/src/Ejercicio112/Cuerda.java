@@ -8,10 +8,9 @@ public abstract class Cuerda {
     public Cuerda(int numCuerdas, String tipoCuerdas) {
         this.numCuerdas = numCuerdas;
         if (tipoCuerdas.equalsIgnoreCase("pulsadas")) {
-            this.tipoCuerdas = tipoCuerdas;
+            this.tipoCuerdas = "pulsadas";
         } else {
             this.tipoCuerdas = "percutidas";
         }
     }
-
 }

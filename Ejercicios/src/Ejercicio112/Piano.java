@@ -7,6 +7,7 @@ public class Piano extends Cuerda {
 
     public Piano(int numCuerdas, String tipoCuerdas, int numTeclas) {
         super(numCuerdas, tipoCuerdas = "percutidas");
+        //CORREGIR: El numero de cuerdas es el mismo que las teclas
         this.numTeclas = numTeclas;
         switch (tipoPiano) {
             case "pared":
@@ -21,6 +22,8 @@ public class Piano extends Cuerda {
         }
     }
 
+    /*CORREGIR: El metodo afinar deberia estar en instrumento, abstracto
+    y usar un metodo de String usando res para cada tipo instrumento*/
     public void afinar() {
         System.out.println("Se han tensado correctamente las " + this.numTeclas + " del piano.");
     }
@@ -31,3 +34,5 @@ public class Piano extends Cuerda {
     }
 
 }
+
+//EN LA FOTO DE LA PIZARRA: AF= afinar, TO= toString

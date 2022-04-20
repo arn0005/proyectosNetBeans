@@ -16,6 +16,8 @@ public class Partitura {
 
     public int numNotas() {
         int contador = 0;
+        /*Recorro el array y cada hueco encontrado
+        sumo uno al contador*/
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] != null) {
                 contador++;
@@ -23,8 +25,11 @@ public class Partitura {
         }
         return contador;
     }
-
+    /*CORREGIR: Random del 1 al 7 para los tipos de notas
+    y rellenar la partitura con cada tipo de nota aleatorio*/
     public Boolean addNota(Nota nueva) {
+        /*Recorre el array al completo o hasta que encuentre
+        un hueco vacio el que rellenar*/
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] == null) {
                 notas[i] = nueva;
@@ -63,6 +68,7 @@ public class Partitura {
     public String toString() {
         int contador = 0;
         String res = this.nombre + " de " + this.autor + "\n";
+        /*Bucle que cada 10 notas aniade un salto de linea*/
         for (int i = 0; i < notas.length; i++) {
             if (contador % 10 == 0 && contador != 0) {
                 res += "\n";

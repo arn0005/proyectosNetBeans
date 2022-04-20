@@ -6,10 +6,9 @@ public abstract class Viento {
 
     public Viento(String tipoViento) {
         if (tipoViento.equalsIgnoreCase("metal")) {
-            this.tipoViento = tipoViento;
+            this.tipoViento = "metal";
         } else {
             this.tipoViento = "madera";
         }
     }
-
 }

@@ -7,6 +7,8 @@ public class Nota {
 
     public Nota(String valor, int duracion) {
         switch (valor) {
+            /*Switch para las notas, tambien se puede usar enum o array
+            lo cual me haria ahorrar lineas de codigo*/
             case "do":
                 this.valor = "do";
                 break;
