@@ -18,7 +18,7 @@ public class main {
                 num = lector.nextInt();
                 if (num < numAleatorio) {
                     System.out.println(num + " es menor que el numero aleatorio");
-                } else if (num > numAleatorio) {
+                } else {
                     System.out.println(num + " es mayor que el numero aleatorio");
                 }
                 if (num == numAleatorio) {
