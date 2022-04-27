@@ -4,9 +4,9 @@ public class Impar {
 
     int numero;
 
-    public Impar(int numero) throws Exception {
+    public Impar(int numero) throws ExcepcionImpar {
         if (numero % 2 == 0) {
-            throw new Exception("El numero no es impar");
+            throw new ExcepcionImpar("El numero no es impar");
         } else {
             this.numero = numero;
         }

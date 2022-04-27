@@ -5,14 +5,14 @@ public class Gato {
     private String nombre;
     private int edad;
 
-    public Gato(String nombre, int edad) throws Exception {
+    public Gato(String nombre, int edad) throws ExceptionGato {
         if (nombre.length() < 3) {
-            throw new Exception("El nombre del gato debe tener al menos 3 caracteres");
+            throw new ExceptionGato("El nombre del gato debe tener al menos 3 caracteres");
         } else {
             this.nombre = nombre;
         }
         if (edad < 0) {
-            throw new Exception("No puedes ponerle una edad negativa");
+            throw new ExceptionGato("No puedes ponerle una edad negativa");
         } else {
             this.edad = edad;
         }
@@ -22,9 +22,9 @@ public class Gato {
         return nombre;
     }
 
-    public void setNombre(String nombre) throws Exception {
+    public void setNombre(String nombre) throws ExceptionGato {
         if (nombre.length() < 3) {
-            throw new Exception("El nombre del gato debe tener al menos 3 caracteres");
+            throw new ExceptionGato("El nombre del gato debe tener al menos 3 caracteres");
         } else {
             this.nombre = nombre;
         }
@@ -34,9 +34,9 @@ public class Gato {
         return edad;
     }
 
-    public void setEdad(int edad) throws Exception {
+    public void setEdad(int edad) throws ExceptionGato {
         if (edad < 0) {
-            throw new Exception("El gato no puede tener edad negativa");
+            throw new ExceptionGato("El gato no puede tener edad negativa");
         } else {
             this.edad = edad;
         }

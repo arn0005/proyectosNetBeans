@@ -17,17 +17,17 @@ public class Piscina {
         return this.nivel;
     }
 
-    public void quitarAgua(int cantidad) throws Exception {
+    public void quitarAgua(int cantidad) throws ExcepcionPiscina {
         if (this.nivel - cantidad < 0) {
-            throw new Exception("La piscina queda por debajo de 0");
+            throw new ExcepcionPiscina("La piscina queda por debajo de 0");
         } else {
             this.nivel -= cantidad;
         }
     }
 
-    public void ponerAgua(int cantidad) throws Exception {
+    public void ponerAgua(int cantidad) throws ExcepcionPiscina {
         if (this.nivel + cantidad > MAXNIVEL) {
-            throw new Exception("La piscina sobrepasa el nivel maximo");
+            throw new ExcepcionPiscina("La piscina sobrepasa el nivel maximo");
         } else {
             this.nivel += cantidad;
         }
